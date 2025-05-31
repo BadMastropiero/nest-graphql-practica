@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { RestModule } from './rest/rest.module';
 import { GraphqlModule } from './graphql/graphql.module';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { GraphqlModule } from './graphql/graphql.module';
       playground: true,
     }),
     // Módulos de la aplicación
+    PrismaModule,
     RestModule,
     GraphqlModule,
   ],
